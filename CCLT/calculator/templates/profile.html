@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลผู้ใช้งาน</title>
+</head>
+<body>
+    <div class="profile-container">
+        <h2>ข้อมูลผู้ใช้งาน</h2>
+        <p>ชื่อผู้ใช้: {{ profile.user.username }}</p>
+        <p>วันเกิด: {{ profile.date_of_birth }}</p>
+        <p>อายุ: {{ age }} ปี</p>
+        <p>น้ำหนัก: {{ profile.weight|default:"ยังไม่ระบุ" }} กก.</p>
+        <p>ส่วนสูง: {{ profile.height|default:"ยังไม่ระบุ" }} ซม.</p>
+        <a href="{% url 'logout' %}">ออกจากระบบ</a>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .profile-container {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px 30px;
+        max-width: 400px;
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333333;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        color: #555555;
+        margin: 10px 0;
+        line-height: 1.5;
+    }
+
+    p span {
+        font-weight: bold;
+        color: #333333;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px 15px;
+        background-color: #ff4b4b;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+        background-color: #e84343;
+    }
+
+    .note {
+        font-size: 12px;
+        color: #777777;
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>

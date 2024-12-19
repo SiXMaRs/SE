@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เมนูหลัก</title>
+</head>
+<body>
+    <div class="container">
+        <h1>ยินดีต้อนรับ </h1>
+        <div class="buttons">
+            <a href="{% url 'register' %}">ลงทะเบียน</a>
+            <a href="{% url 'login' %}">เข้าสู่ระบบ</a>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        text-align: center;
+        background: #fff;
+        padding: 40px 60px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #007BFF;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* ระยะห่างระหว่างปุ่ม */
+    }
+    .buttons a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #007BFF;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+    .buttons a:hover {
+        background-color: #0056b3;
+    }
+</style>
